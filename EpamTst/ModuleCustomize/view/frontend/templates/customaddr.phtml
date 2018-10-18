@@ -1,0 +1,8 @@
+<div class="field custom<?php if ($block->isRequired()) echo ' required'; ?>">
+    <label class="label" for="<?php echo $block->escapeHtml($block->getFieldId()); ?>">
+        <span><?php echo $block->escapeHtml($block->getFieldLabel()); ?></span>
+    </label>
+    <div class="control">
+        <input type="text" id="<?php echo $block->escapeHtml($block->getFieldId()); ?>" name="<?php echo $block->escapeHtml($block->getFieldName()); ?>" value="<?php echo $block->escapeHtml($block->getValue()); ?>" title="<?php echo $block->escapeHtml($block->getFieldLabel()); ?>" class="input-text">
+    </div>
+</div>
