@@ -51,7 +51,7 @@ class Customaddr extends Column
                 $billingID =  $customerObj->getDefaultBilling();
                 $address = $objectManager->create('Magento\Customer\Model\Address')->load($billingID);
                 $defaultAddress = $address->getData();
-                $item[$this->getData('name')] = $defaultAddress['customaddr'];
+                if (isset($defaultAddress['customaddr'])) $item[$this->getData('name')] = $defaultAddress['customaddr'];
             }
         }
         return $dataSource;

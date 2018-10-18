@@ -1,4 +1,5 @@
 <?php
+
 namespace EpamTst\ModuleCustomize\Observer;
 
 use Magento\Framework\Event\Observer as EventObserver;
@@ -29,7 +30,7 @@ class SaveCustomAddrToOrderObserver implements ObserverInterface
         $quoteRepository = $this->_objectManager->create('Magento\Quote\Model\QuoteRepository');
         /** @var \Magento\Quote\Model\Quote $quote */
         $quote = $quoteRepository->get($order->getQuoteId());
-        $order->setCustomaddr( $quote->getCustomaddr() );
+        $order->setCustomaddr($quote->getCustomaddr());
 
         return $this;
     }

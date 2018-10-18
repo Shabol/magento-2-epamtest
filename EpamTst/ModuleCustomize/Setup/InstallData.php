@@ -72,14 +72,7 @@ class InstallData implements InstallDataInterface
         );
 
         $customAttribute->save();
-/*
-        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-        $salesSetup = $objectManager->create('Magento\Sales\Setup\SalesSetup');
-        $salesSetup->addAttribute('order_address', 'customaddr', ['type' =>'varchar']);
 
-        $quoteSetup = $objectManager->create('Magento\Quote\Setup\QuoteSetup');
-        $quoteSetup->addAttribute('quote_address', 'customaddr', ['type' =>'varchar']);
-*/
         $setup->endSetup();
     }
 }
